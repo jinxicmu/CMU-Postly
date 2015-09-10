@@ -52,10 +52,8 @@ Search for posts
 T.13
 User statistics
 : For a given user-name 'U', display the following counts, or print a warning if 'U' does not exist.
-(a)
-The number of posts made by that user
-(b)
-The number of likes made by that user
+(a) The number of posts made by that user
+(b) The number of likes made by that user
 T.14
 Global statistics
 The system should be able to list heavy users, and specifically:
