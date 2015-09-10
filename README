@@ -1,5 +1,5 @@
 1.1 General Description
-The goal is to design and implement CMUPostly, a very simple application that lets you make a post, like other posts and see some statistics. Your work is divided into two phases, as we discuss in the lecture foils, following the
+The goal is to design and implement CMUPostly, an web-based application that lets you make a post, like other posts and see some statistics. Your work is divided into two phases, as we discuss in the lecture foils, following the
 http://www.cs.cmu.edu/~christos/courses/dbms.S15/slides/CMU_ONLY/Roussopoulos-Yeh.pdf
 The first phase consists of the requirement analysis, system analysis, conceptual modeling and task emulation. 
 The second phase consists of implementation and testing: Using the API we provide you, you will have to implement your database design, as well as the functionality that the API supports, and deploy your solution on a webserver.
