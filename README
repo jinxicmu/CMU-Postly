@@ -1,0 +1,64 @@
+1.1 General Description
+The goal is to design and implement CMUPostly, a very simple application that lets you make a post, like other posts and see some statistics. Your work is divided into two phases, as we discuss in the lecture foils, following the
+http://www.cs.cmu.edu/~christos/courses/dbms.S15/slides/CMU_ONLY/Roussopoulos-Yeh.pdf
+The first phase consists of the requirement analysis, system analysis, conceptual modeling and task emulation. 
+The second phase consists of implementation and testing: Using the API we provide you, you will have to implement your database design, as well as the functionality that the API supports, and deploy your solution on a webserver.
+
+2.1 Data Needed to be stored
+User
+: For each user, the system needs to track the unique username, (between 2 and 50 characters), the password, the posts (see below) he/she makes and likes.
+Posts
+: The system needs to store the body of the post, the username of the author, the timestamp it was created and users who like a post.
+
+2.2 Functionality Highlights
+In CMUPostly we have users who make posts, like posts made by other users, read posts, etc, as described below. You have to implement the following Tasks:
+
+T.1
+Create user account (Register): 
+We need the user-name of the user and the password. Prompt for a new user-name, if the proposed one is taken.
+T.2
+Reset database
+: Keep the tables, but delete all their records.
+T.3
+Login
+: Obvious - your system would ask for a user-name and password, and authenticate the user or deny further access.
+T.4
+Timeline
+: After log-in, the main page should display the timeline. That is, your system should show all the posts of all users in chronological order(newest first).
+T.5
+List hottest posts
+: User shoud be able to see the hottest posts over the last day/week/month (based on post's timestamp). Hotness of a post is based on the number of likes.
+T.6
+Add Post
+: Once authenticated, a user should be able to add a post.
+T.7
+Search for a user
+: Given query sub-string (say mic) print all the user-names that contain this sub-string (e.g.,michael, mickey, karmic)
+T.8
+Like a post
+: Your system should allow a user to like another post made by a different user, but not himself. One should be allowed to like a given post only once.
+T.9
+Delete a post
+: A user should be allowed to delete a post, provided he is the owner of the post.
+T.10
+Recommend posts based on likes
+: For a given user 'U', your system should recommend posts to read. In short, we want to recommend the posts that are liked by other users whose tastes match the given user 'U'. You should not include the posts that the user has already liked. Recommended posts should be sorted based on the 'Similarity Score' i.e the posts with the highest 'common likes' should be displayed first.
+T.11
+List all post for a given user
+: For a given user 'U', list posts made by that user in descending order of the post timestamp.
+T.12
+Search for posts
+: For a input string, search for the posts which contain this string.
+T.13
+User statistics
+: For a given user-name 'U', display the following counts, or print a warning if 'U' does not exist.
+(a)
+The number of posts made by that user
+(b)
+The number of likes made by that user
+T.14
+Global statistics
+The system should be able to list heavy users, and specifically:
+(a) Most popular: List of K posts with the most likes
+(b) Most active: List of K users with the most posts
+In all the above cases, treat K as a parameter. In case of a tie in K-th place, report only K users, favoring the alphabetically first. I.e., if K =1, and 'bob' and 'alice' tie in first place, report only 'alice'.

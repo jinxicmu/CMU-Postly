@@ -1,0 +1,25 @@
+<Files "api">
+Order Allow,Deny
+Deny from all
+</Files>
+<Files "config">
+Order Allow,Deny
+Deny from all
+</Files>
+<Files "find_users">
+Order Allow,Deny
+Deny from all
+</Files>
+<Files "functions">
+Order Allow,Deny
+Deny from all
+</Files>
+<Files "index">
+Order Allow,Deny
+Deny from all
+</Files>
+<Files "functions">
+Order Allow,Deny
+Deny from all
+</Files>
+
